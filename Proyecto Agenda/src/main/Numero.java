@@ -23,7 +23,12 @@ public class Numero {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	
+	public Numero(int iD, String etiqueta, String numero) {
+		super();
+		ID = iD;
+		this.etiqueta = etiqueta;
+		this.numero = numero;
+	}
 	
 	
 }

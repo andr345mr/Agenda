@@ -43,22 +43,36 @@ public class Registro {
 	//metodos por implementar
 	private void desplegarNumeros(){
 		for(Numero e:numeros){
-			
+			System.out.println(e.toString());			
 		}
 	}
 	private void desplegarRedesSociales(){
-		
+		for(RedSocial e:redesSociales){
+			System.out.println(e.toString());			
+		}
 	}
 	public void desplegarRegistro(int ID){
-		
+		System.out.print("Nombre: ");
+		System.out.println(this.nombre);
+		System.out.print("Apellido: ");
+		System.out.println(this.apellido);
+		System.out.print("Empresa: ");
+		System.out.println(this.empresa);
+		System.out.print("Sitio Web: ");
+		System.out.println(this.sitioWeb);
+		desplegarNumeros();
+		desplegarRedesSociales();
 	}
-	public void agregarNumero(){
-		
+	public void agregarNumero(String etiqueta, String numero){
+		int id = numeros.size();
+		numeros.add(new Numero(id,etiqueta,numero));
 	}
-	public void agregarRedSocial(){
-		
+	public void agregarRedSocial(String tipo, String usuario, String URL){
+		int id = redesSociales.size();	
+		redesSociales.add(new RedSocial(id,tipo,usuario,URL));
 	}
-	public void actualizarRegistro(){
+	public void actualizarRegistro(int ID, String nombre, String apellido, String empresa, String sitioWeb,
+			ArrayList<Numero> numeros, ArrayList<RedSocial> redesSociales){
 		
 	}
 	
