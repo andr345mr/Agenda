@@ -4,7 +4,7 @@ public class Agenda {
 	private ArrayList<Registro> registros;
 	
 	/*private void ordenarRegistros(){
-		
+		Funcion que se implementara si se termina en tiempo la agenda
 	}*/
 	public Registro getRegistro(){
 		
