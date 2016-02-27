@@ -1,4 +1,4 @@
-package main;
+package modelo;
 import java.util.*;
 public class Registro {
 	private int ID;
@@ -62,7 +62,7 @@ public class Registro {
         /*
         * Escribe todos los datos del registro en consola
         */
-	public void desplegarRegistro(int ID){
+	public void desplegarRegistro(){
             System.out.print("Nombre: ");
             System.out.println(this.nombre);
             System.out.print("Apellido: ");
@@ -89,12 +89,6 @@ public class Registro {
             redesSociales.add(new RedSocial(id,tipo,usuario,URL));
 	}
         
-        /*
-        * Actualiza un registro a partir de un identificador
-        */
-	public void actualizarRegistro(Registro nuevoRegistro, int IDOrigen){
-		
-	}
 	
 	public Registro(int iD, String nombre, String apellido, String empresa, String sitioWeb, ArrayList<Numero> numeros,
 			ArrayList<RedSocial> redesSociales) {

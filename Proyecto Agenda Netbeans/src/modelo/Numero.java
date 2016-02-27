@@ -1,4 +1,4 @@
-package main;
+package modelo;
 
 public class Numero {
 	private int ID;
@@ -29,6 +29,17 @@ public class Numero {
 		this.etiqueta = etiqueta;
 		this.numero = numero;
 	}
-	
+	public Numero(String etiqueta, String numero) {
+		super();
+		this.etiqueta = etiqueta;
+		this.numero = numero;
+	}
+        
+        @Override
+        public String toString(){
+            String m;
+            m = etiqueta + " - " + numero;
+            return m;
+        }
 	
 }
