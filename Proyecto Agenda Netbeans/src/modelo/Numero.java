@@ -1,3 +1,10 @@
+/*
+ * Autor: Andres Roberto Meza Rivera
+ * Fecha de creación: 15/2/2016
+ * Fecha de modificacion: 26/2/2016
+ * Descripcion: Define los componentes basicos de un registro de redes sociales
+ *    para despues ser usada como una lista
+ */
 package modelo;
 
 public class Numero {
