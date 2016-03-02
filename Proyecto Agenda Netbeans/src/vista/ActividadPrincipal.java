@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
 import modelo.Agenda;
@@ -12,14 +7,11 @@ import modelo.Registro;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author missael
- */
+
 public class ActividadPrincipal {
     private static Agenda agenda = new Agenda();
     
-    private static Scanner s = new Scanner(System.in);
+    private static Scanner entradaPorTeclado = new Scanner(System.in);
     
     private static void limpiarPantalla(){
         for(int i = 0; i < 100; i++){
@@ -29,8 +21,8 @@ public class ActividadPrincipal {
     
     private static void esperarUsuario(){
         System.out.println("Escribe cualquier cosa para continuar...");
-        s.nextLine();
-        String temp = s.nextLine();
+        entradaPorTeclado.nextLine();
+        String temp = entradaPorTeclado.nextLine();
     }
     
     private static int escribirMenu(){
@@ -42,11 +34,11 @@ public class ActividadPrincipal {
         System.out.println("3. Desplegar registros");
         System.out.println("0. Salir");
         System.out.print("Opcion: ");
-        return s.nextInt();
+        return entradaPorTeclado.nextInt();
     }
     
     private static void agregarRegistro(){
-        s.nextLine();
+        entradaPorTeclado.nextLine();
         String nombre, apellido, empresa, sitioWeb;
         ArrayList<RedSocial> redesSocialesRegistro = new ArrayList<RedSocial>();
         ArrayList<Numero> numerosRegistro = new ArrayList<Numero>();
@@ -56,28 +48,28 @@ public class ActividadPrincipal {
         
         
         System.out.println("Nombre");
-        nombre = s.nextLine();
+        nombre = entradaPorTeclado.nextLine();
         System.out.println("Apellido");
-        apellido = s.nextLine();
+        apellido = entradaPorTeclado.nextLine();
         System.out.println("Empresa");
-        empresa = s.nextLine();
+        empresa = entradaPorTeclado.nextLine();
         System.out.println("Sitio web");
-        sitioWeb = s.nextLine();
+        sitioWeb = entradaPorTeclado.nextLine();
         
         System.out.println("Cuantas redes sociales quieres registrar?");
-        red = s.nextInt();
+        red = entradaPorTeclado.nextInt();
         for(int i = 0; i < red; i++){
             String tipo;
             String nombreUsuario;
             String URL;
             
-            s.nextLine(); // limpiamos el buffer de lectura cada iteracion
+            entradaPorTeclado.nextLine(); // limpiamos el buffer de lectura cada iteracion
             System.out.println("Escribe el tipo de red social que deseas registrar (Facebook por ejemplo)");
-            tipo = s.nextLine();
+            tipo = entradaPorTeclado.nextLine();
             System.out.println("Escribe el nombre de usuario");
-            nombreUsuario = s.nextLine();
+            nombreUsuario = entradaPorTeclado.nextLine();
             System.out.println("Escribe la URL asociada al perfil");
-            URL = s.nextLine();
+            URL = entradaPorTeclado.nextLine();
             
             RedSocial r = new RedSocial(tipo, nombreUsuario, URL);
             
@@ -85,15 +77,15 @@ public class ActividadPrincipal {
         }
         
         System.out.println("Cuantos numeros quieres registrar?");
-        numero = s.nextInt();
+        numero = entradaPorTeclado.nextInt();
         for(int i = 0; i < numero; i++){
             String etiqueta;
             String num;
-            s.nextLine(); // limpiamos el buffer de lectura
+            entradaPorTeclado.nextLine(); // limpiamos el buffer de lectura
             System.out.println("Escribe la etiqueta de numero a registrar");
-            etiqueta = s.nextLine();
+            etiqueta = entradaPorTeclado.nextLine();
             System.out.println("Escribe el numero a registrar");
-            num = s.nextLine();
+            num = entradaPorTeclado.nextLine();
             Numero n = new Numero(etiqueta, num);
             numerosRegistro.add(n);
         }
